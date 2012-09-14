@@ -9,4 +9,13 @@ TEST(StackTest, Push) {
   delete s;
 }
 
+TEST(ResizeTest, Push) {
+	Stack* s = new Stack();	
+	for(int i=1;i<=12;i++){
+		s->push(i);
+	}
+	EXPECT_EQ(12, s->size());
+	delete s;
+}
+
 
