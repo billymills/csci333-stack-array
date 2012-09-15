@@ -11,7 +11,15 @@ Stack::~Stack() {
 }
 
 void Stack::push(int value) {
-  //if theStack is full
+  	if (theStack->size==top){
+		Stack* newStack = new Stack[(theStack->size) * 2];
+		//memcpy(newStack, theStack, newStack->size);
+		for (int i=0;i<=theStack->size()-1;++i){
+			newStack[i]=theStack[i];
+		}
+		delete[] theStack;
+		theStack = newStack;
+	}
   // create new stack twice as big
   // copy all elements to new stack
   // delete old stack
