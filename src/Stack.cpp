@@ -22,7 +22,7 @@ Stack::~Stack() {
 
 //push method definition for Stack Class
 void Stack::push(int value) {
-  	/*
+  	
 	if (top==full){  //if the array is full resize it
 		int* newStack = new int[full*2];  //if full resize array
 		for (int i=0;i<full;++i){
@@ -31,7 +31,7 @@ void Stack::push(int value) {
 		delete[] theStack;
 		theStack = newStack;
 	}
-	*/
+	
   // create new stack twice as big
   // copy all elements to new stack
   // delete old stack
