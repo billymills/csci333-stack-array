@@ -3,6 +3,7 @@
 
 #include "Stack.h"
 #include <iostream>
+#include <assert.h>
 
 using std::cout;
 using std::endl;
@@ -29,7 +30,9 @@ void Stack::push(int value) {
 		}
 		delete[] theStack;  //delete old stack
 		theStack = newStack; //this is reassigning the pointer
+		full *= 2; //update full
 	}
+	assert(top != full);  //additional test condition
   	theStack[top] = value;
 	top++;
 }
